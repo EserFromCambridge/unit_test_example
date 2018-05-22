@@ -1,0 +1,6 @@
+[submodule "submodules/mbedOS"]
+	path = submodules/mbedOS
+	url = https://github.com/EserFromCambridge/mbedOS
+[submodule "submodules/cpputest"]
+	path = submodules/cpputest
+	url = https://github.com/EserFromCambridge/cpputest
