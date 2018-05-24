@@ -7,6 +7,7 @@
 
 // CppuTest includes
 #include "CppUTest/TestHarness.h"
+#include "CppUTestExt/MockSupport.h"
 
 // Header for unit under test
 
@@ -25,8 +26,16 @@ TEST_GROUP(Example) {
 	}
 };
 
-TEST(Example, Test1)
-{
-   FAIL("Fail me!");
+TEST(Example, Test1) {
+    /* Check two longs are equal */
+    LONGS_EQUAL(1, 1);
+}
+
+TEST(Example, Test2) {
+    /* Check a condition */
+    CHECK(true == true);
+
+    /* Check a string */
+    STRCMP_EQUAL("HelloWorld", "HelloWorld");
 }
 

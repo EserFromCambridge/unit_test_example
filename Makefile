@@ -9,7 +9,7 @@ export SRCBASE := $(shell pwd)
 ###############################################################################
 # Project settings
 
-GCC_BIN := ~/opt/gcc-arm-none-eabi-7-2017-q4-major/bin/
+GCC_BIN := ~/opt/gcc-arm-none-eabi-6-2017-q2-update/bin/
 MBED_OS := /submodules/mbedOS
 PROJECT := bin/project
 
@@ -20,10 +20,9 @@ PROJECT := bin/project
 OBJECTS = $(SRCBASE)/main.o
 
 # Application Layer
-
+OBJECTS += $(SRCBASE)/application/example.o
 
 # Device Layer
-
 
 # Driver Layer
 
@@ -73,30 +72,18 @@ INCLUDE_PATHS += -I$(SRCBASE)/$(MBED_OS)/rtos/TARGET_CORTEX/rtx5/RTX/Source/
 INCLUDE_PATHS += -I$(SRCBASE)/$(MBED_OS)/cmsis/TARGET_CORTEX_M/
 INCLUDE_PATHS += -I$(SRCBASE)/$(MBED_OS)/cmsis/TARGET_CORTEX_M/TOOLCHAIN_GCC/
 
-#Include paths for the SD card driver library:
-INCLUDE_PATHS += -I$(SRCBASE)/$(MBED_OS)/BUILD/libraries/mbedOS/K64F/GCC_ARM/sd-driver/
 #Include paths for the RTOS library in mbed
 INCLUDE_PATHS += -I$(SRCBASE)/$(MBED_OS)/rtos/
 
-INCLUDE_PATHS += -I$(SRCBASE)/mbed
-INCLUDE_PATHS += -I$(SRCBASE)/mbed/common
-INCLUDE_PATHS += -I$(SRCBASE)/mbed/drivers
-INCLUDE_PATHS += -I$(SRCBASE)/mbed/hal
-INCLUDE_PATHS += -I$(SRCBASE)/mbed/platform
-INCLUDE_PATHS += -I$(SRCBASE)/mbed/TARGET_K64F
-INCLUDE_PATHS += -I$(SRCBASE)/mbed/TARGET_K64F/TARGET_Freescale
-
-INCLUDE_PATHS += -I$(SRCBASE)/submodules/mbedOS/features/mbedtls/inc/
-INCLUDE_PATHS += -I$(SRCBASE)/submodules/mbedOS/features/mbedtls/
+INCLUDE_PATHS += -I$(SRCBASE)/$(MBED_OS)/features/mbedtls/inc/
+INCLUDE_PATHS += -I$(SRCBASE)/$(MBED_OS)/features/mbedtls/
 
 export INCLUDE_PATHS
 
-
-#LIBRARY_PATHS = -L$(SRCBASE)/submodules/mbed/build/fat/TARGET_K64F/TOOLCHAIN_GCC_ARM/ -L$(SRCBASE)/submodules/mbed/build/rtos/TARGET_K64F/TOOLCHAIN_GCC_ARM/ -L$(SRCBASE)/submodules/mbed/build/net/eth/TARGET_K64F/TOOLCHAIN_GCC_ARM/
-LIBRARY_PATHS =  -L$(SRCBASE)/submodules/mbedOS/BUILD/libraries/mbedOS/K64F/GCC_ARM/
-LINKER_SCRIPT =  $(SRCBASE)/submodules/mbedOS/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_MCU_K64F/device/TOOLCHAIN_GCC_ARM/MK64FN1M0xxx12.ldo
-LINKER_SCRIPT_INPUT = $(SRCBASE)/submodules/mbedOS/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_MCU_K64F/device/TOOLCHAIN_GCC_ARM/MK64FN1M0xxx12.ld
-STATIC_LIBRARIES = $(SRCBASE)/submodules/mbedOS/BUILD/libraries/mbedOS/K64F/GCC_ARM/libmbedOS.a
+LIBRARY_PATHS =  -L$(SRCBASE)/$(MBED_OS)/BUILD/libraries/mbedOS/K64F/GCC_ARM/
+LINKER_SCRIPT =  $(SRCBASE)/$(MBED_OS)/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_MCU_K64F/device/TOOLCHAIN_GCC_ARM/MK64FN1M0xxx12.ldo
+LINKER_SCRIPT_INPUT = $(SRCBASE)/$(MBED_OS)/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_MCU_K64F/device/TOOLCHAIN_GCC_ARM/MK64FN1M0xxx12.ld
+STATIC_LIBRARIES = $(SRCBASE)/$(MBED_OS)/BUILD/libraries/mbedOS/K64F/GCC_ARM/libmbedOS.a
 export STATIC_LIBRARIES
 
 

@@ -1,4 +1,3 @@
-utilities/QTFakeScreen/Makefile
 *aes256
 .qmake.stash
 qt5.app
@@ -6,8 +5,6 @@ moc_*
 x86_server
 .cproject
 .project
-Data/index.htm.h
-Data/settings.htm.h
 *.o
 *.so
 *.a
@@ -28,10 +25,7 @@ Data/settings.htm.h
 *.cap
 *.out
 /tmp
-proc_audio
-/utilities/network_testing/example.txt
 *.pyc
-/utilities/version.txt
 *.su
 .DS_Store
 *.Plo
@@ -41,7 +35,6 @@ djpeg
 jconfig.h
 .deps/
 .libs/
-/submodules/jpeg-9b/Makefile
 libtool
 rdjpgcom
 stamp-h1

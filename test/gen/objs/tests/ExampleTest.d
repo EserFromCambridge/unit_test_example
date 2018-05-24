@@ -11,7 +11,15 @@ gen/objs/./tests/ExampleTest.o: tests/ExampleTest.cpp mock/NewMacros.h \
   ../submodules/cpputest/include/CppUTest/TestResult.h \
   ../submodules/cpputest/include/CppUTest/TestFailure.h \
   ../submodules/cpputest/include/CppUTest/TestPlugin.h \
-  ../submodules/cpputest/include/CppUTest/MemoryLeakWarningPlugin.h
+  ../submodules/cpputest/include/CppUTest/MemoryLeakWarningPlugin.h \
+  ../submodules/cpputest/include/CppUTestExt/MockSupport.h \
+  ../submodules/cpputest/include/CppUTestExt/MockFailure.h \
+  ../submodules/cpputest/include/CppUTestExt/MockCheckedActualCall.h \
+  ../submodules/cpputest/include/CppUTestExt/MockActualCall.h \
+  ../submodules/cpputest/include/CppUTestExt/MockNamedValue.h \
+  ../submodules/cpputest/include/CppUTestExt/MockExpectedCallsList.h \
+  ../submodules/cpputest/include/CppUTestExt/MockCheckedExpectedCall.h \
+  ../submodules/cpputest/include/CppUTestExt/MockExpectedCall.h
 
 mock/NewMacros.h:
 
@@ -40,3 +48,19 @@ mock/NewMacros.h:
 ../submodules/cpputest/include/CppUTest/TestPlugin.h:
 
 ../submodules/cpputest/include/CppUTest/MemoryLeakWarningPlugin.h:
+
+../submodules/cpputest/include/CppUTestExt/MockSupport.h:
+
+../submodules/cpputest/include/CppUTestExt/MockFailure.h:
+
+../submodules/cpputest/include/CppUTestExt/MockCheckedActualCall.h:
+
+../submodules/cpputest/include/CppUTestExt/MockActualCall.h:
+
+../submodules/cpputest/include/CppUTestExt/MockNamedValue.h:
+
+../submodules/cpputest/include/CppUTestExt/MockExpectedCallsList.h:
+
+../submodules/cpputest/include/CppUTestExt/MockCheckedExpectedCall.h:
+
+../submodules/cpputest/include/CppUTestExt/MockExpectedCall.h:
