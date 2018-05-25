@@ -1,0 +1,8 @@
+language: cpp
+compiler: clang++
+sudo: false # only for faster builds
+install:
+ - pip install gcovr
+script:
+  - gcovr -r . --html --html-details -o coverage/example-html-details.html
+
