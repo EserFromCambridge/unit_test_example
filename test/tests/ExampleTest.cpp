@@ -9,6 +9,7 @@
 #include "CppUTest/TestHarness.h"
 #include "CppUTestExt/MockSupport.h"
 
+#include "example.h"
 // Header for unit under test
 
 
@@ -37,5 +38,9 @@ TEST(Example, Test2) {
 
     /* Check a string */
     STRCMP_EQUAL("HelloWorld", "HelloWorld");
+}
+
+TEST(Example, example) {
+	LONGS_EQUAL(5, ex_add());
 }
 
