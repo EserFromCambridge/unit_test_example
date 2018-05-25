@@ -40,8 +40,11 @@ CPPUTEST_USE_EXTENSIONS = Y
 INCLUDE_DIRS	:=\
   .\
   ../application\
-  ../submodules/mbedOS\
   $(CPPUTEST_HOME)/include\
+#  ../submodules/mbedOS\
+  ../submodules/mbedOS/rtos/TARGET_CORTEX\
+  ../submodules/mbedOS/rtos/TARGET_CORTEX/rtx5/RTX/Source\
+  ../submodules/mbedOS/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_MCU_K64F/device\
 
 # This line is overriding the default new macros.  This is helpful
 # when using std library includes like <list> and other containers

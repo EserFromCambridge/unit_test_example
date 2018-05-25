@@ -7,3 +7,6 @@
 
 #include "example.h"
 
+int ex_add() {
+	return 5;
+}
