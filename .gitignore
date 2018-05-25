@@ -5,6 +5,10 @@ moc_*
 x86_server
 .cproject
 .project
+*.gcov
+*.gcda
+*.gcno
+test/gen/
 *.o
 *.so
 *.a
